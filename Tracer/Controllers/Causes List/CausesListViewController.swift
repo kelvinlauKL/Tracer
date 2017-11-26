@@ -29,6 +29,7 @@ final class CausesListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = "Causes"
     dataStore.getCauses { causes in
       self.causes = causes
     }

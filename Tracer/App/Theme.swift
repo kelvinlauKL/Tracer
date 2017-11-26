@@ -14,5 +14,9 @@ enum Theme {
   
   static func apply() {
     UINavigationBar.appearance().barTintColor = navigationBarColor
+    UINavigationBar.appearance().titleTextAttributes = [
+      .font: UIFont(name: "Helvetica Neue", size: 17)!,
+      .foregroundColor: UIColor.white
+    ]
   }
 }

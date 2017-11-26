@@ -50,6 +50,16 @@ extension CausesListViewController: UICollectionViewDataSource {
   }
 }
 
+// MARK: - UICollectionViewDelegate
+extension CausesListViewController: UICollectionViewDelegate {
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let cause = causes[indexPath.item]
+    let detailVC = CauseDetailViewController.instantiate(with: cause)
+    navigationController?.pushViewController(detailVC, animated: true)
+  }
+}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension CausesListViewController: UICollectionViewDelegateFlowLayout {
   
